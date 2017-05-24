@@ -1,0 +1,49 @@
+<view class="mask">
+</view>
+<scroll-view scroll-y="true" bindscroll="scroll">
+  <view class="header">
+    <input class="header-input" placeholder="请输入书名、作者、类型等" bindinput="inputChange" />
+    <image src="{{iconPath}}" class="header-scan" bindtap="searchByScan"></image>
+    <image src="../../img/search.png" class="header-search" bindtap="searchByKey"></image>
+  </view>
+  <view class="standAplace">
+  </view>
+  <view class="insideBox">
+    <block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.bookId">
+      <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+        <view class="list-img">
+          <image class="video-img" src="{{list.bookImgPath}}"></image>
+        </view>
+        <view class="list-detail">
+          <view class="list-title">
+            <text>{{list.bookName}}</text>
+          </view>
+          <view class="list-infor">
+            <text> {{list.bookWriterName}}</text>|
+            <text>{{list.bookPublisher}}</text>
+          </view>
+          <view class="list-brief">{{list.bookBriefIntro}}...</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="classification" style="display:{{display}};">
+    <button class="classification-type" style="background:#EE3B3B;" id="文学" bindtap="searchByType">文学</button>
+    <button class="classification-type" style="background:orange; " id="流行" bindtap="searchByType">流行</button>
+    <button class="classification-type" style="background:#FFD700;" id="文化" bindtap="searchByType">文化</button>
+    <button class="classification-type" style="background:#00CD00;" id="科技" bindtap="searchByType">科技</button>
+    <button class="classification-type" style="background:#4876FF;" id="生活" bindtap="searchByType">生活</button>
+    <button class="classification-type" style="background:#8968CD;" id="经营" bindtap="searchByType">经管</button>
+  </view>
+  <view class="history" style="display:{{display}};">
+    <view class="history-title">搜索历史</view>
+    <view class="history-del" bindtap="clearHistory">
+      <image src="../../img/delete.png" class="history-del-icon"></image>
+      <view>清除</view>
+    </view>
+    <view id ="{{item}}" class="history-item" wx:for-items="{{searchHistory}}" wx:for-item="item" wx:for-index="idx" wx:key="idx"  bindtap="searchByHistory">
+      <image src="../../img/clock.png" class="history-item-icon"></image>
+      <view class="history-item-cont" >{{item}}</view>
+    </view>
+  </view>
+</scroll-view>

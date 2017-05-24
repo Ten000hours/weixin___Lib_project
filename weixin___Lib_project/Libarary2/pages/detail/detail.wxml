@@ -1,0 +1,61 @@
+<view class="mask">
+</view>
+<view class="header">
+  <view class="header-name"> {{lists[0].bookName}}</view>
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+</view>
+<view class="standAplace">
+</view>
+<view class="main">
+  <view class="book-list">
+    <view>
+      <image class="bookimage" src="{{lists[0].bookImgPath}}"></image>
+    </view>
+    <view class="book-info">
+      <view class="book-info-style">
+        <view class="inforrow">书名: {{lists[0].bookName}}</view>
+        <view class="inforrow">作者: {{lists[0].bookWriterName}} </view>
+        <view class="inforrow">价格: {{lists[0].bookPrice}}</view>
+        <view class="inforrow">在架位置: {{lists[0].bookPosition}}</view>
+        <view class="inforrow">出版信息: {{lists[0].bookPublisher}}</view>
+        <view class="inforrow">所属类别: {{lists[0].bookType}}</view>
+        <view class="inforrow">被借阅次数: {{lists[0].bookBorrowTimes}}</view>
+        <view class="inforrow">可借数量: {{lists[0].bookCollectNum}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="button">
+    <button class="button-item" type="primary">借阅</button>
+    <button class="button-item" type="warn">预定</button>
+    <button class="button-item" type="default">收藏</button>
+  </view>-->
+  <view class="brief-view">
+    <view>【内容简介】</view>
+    <view class="brief-view-content">{{lists[0].bookBriefIntro}}</view>
+  </view>
+  <view class="brief-view">
+    <view>【作者简介】</view>
+    <view class="brief-view-content">{{lists[0].bookWriterInfor}}</view>
+  </view>
+  <view class="brief-view">
+    <view>【目录】</view>
+    <view class="brief-view-content">{{lists[0].bookCatalog}}</view>
+  </view>
+</view>
+<view class="standAplace">
+</view>
+<view class="bottom">
+  <view class="bottom-favorite">
+    <image src="../../img/favorite.png" class="bottom-icon"></image>
+    <view>收藏</view>
+  </view>
+  <view class="bottom-order">
+    <image src="../../img/order.png" class="bottom-icon"></image>
+    <view>预订</view>
+  </view>
+  <view class="bottom-borrow">
+    <image src="../../img/borrow.png" class="bottom-icon"></image>
+    <view>借阅</view>
+  </view>
+</view>

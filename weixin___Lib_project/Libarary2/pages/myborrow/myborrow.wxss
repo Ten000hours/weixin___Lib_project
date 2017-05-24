@@ -1,0 +1,54 @@
+page{
+    background: url("http://www.siliangjiadan.cn/img/background.jpg") fixed;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑";
+}
+.mask{
+  width:100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.5;
+  position: absolute;
+  position: fixed;
+}
+.borrowed-num{
+    width: 100%;
+    height: 150rpx;
+    line-height: 150rpx;
+    text-align: center;
+    color: #4F94CD;
+    font-weight: bold;
+    background: #333;
+}
+.insideBox{
+    border-bottom: solid gray 1rpx;
+}
+.list{
+    height: 160rpx;
+    border:solid gray 1rpx; 
+    color: gray;
+    overflow: hidden;
+    border-left:0rpx; 
+    border-right: 0rpx;
+    border-bottom: 0rpx;
+}
+.list-img{
+    width:105rpx;
+    height: 140rpx;
+    margin: 10rpx 40rpx 0rpx 10rpx;
+    box-shadow: 0rpx 0rpx 20rpx black;
+    float: left;
+}
+.list-detail{ 
+    margin-left: 90rpx;
+    font-size: 28rpx;
+    margin-top: 8rpx;
+}
+.list-title{
+    width: 100%;
+    font-size: 35rpx;
+    color: #3B3B3B;
+    font-weight: bold;
+}

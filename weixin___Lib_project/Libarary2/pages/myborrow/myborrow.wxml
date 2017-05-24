@@ -1,0 +1,24 @@
+<view class="mask">
+</view>
+<scroll-view class="box" scroll-y="true" bindscroll="scroll">
+  <view class="borrowed-num">当前借阅数:6</view>
+  <view class="insideBox">
+    <view style="display:">
+      <block wx:for="{{myborrow}}" wx:for-item="list" wx:key="list.id">
+        <view class="list">
+          <view>
+            <image class="list-img" src="{{list.img}}"></image>
+          </view>
+          <view class="list-detail">
+            <view class="list-title">
+              <text>{{list.title}}</text>
+            </view>
+            <view class="list-author">作者： {{list.author}}</view>
+            <view class="list-borrow">借阅日期： {{list.borrowday}}</view>
+            <view class="list-return">到期日期： {{list.returnday}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</scroll-view>

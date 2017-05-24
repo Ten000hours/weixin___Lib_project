@@ -1,0 +1,8 @@
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text bindtap="publish" class="header-publish">发布</text>
+</view>
+<view class="standAplace">
+</view>
+<textarea  bindinput="getContent" maxlength="1000" class="input" placeholder="请输入你想分享的书籍或佳句" />
+

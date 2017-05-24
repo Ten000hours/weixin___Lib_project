@@ -1,0 +1,37 @@
+<view class="mask">
+</view>
+<view class="login" wx:if="{{!online}}">
+  <view class="login">
+    <view class="login-form">
+      <view class="input">
+        <view class="instruction">账号</view>
+        <input placeholder="用户名/手机号" class="login-txt" bindinput="getUserName"/>
+      </view>
+      <view class="input">
+        <view class="instruction">密码</view>
+        <input placeholder="请输入密码" class="login-txt" password="ture" bindinput="getPassword"/>
+      </view>
+      <button class="login-btn" bindtap="login">登录</button>
+    </view>
+    <view class="forget-reg">
+      <text class="forget">忘记密码</text>
+      <text class="reg">注册</text>
+    </view>
+  </view>
+</view>
+<view class="online" wx:if="{{online}}">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userName}}</text>
+  </view>
+  <view class="detail">
+    <navigator url="{{item.url}}" wx:for="{{meList}}" wx:key="text">
+      <view class="list">
+        <image src="{{item.icon}}" style="margin-right: 15px;vertical-align: middle;width:20px; height: 20px;"></image>
+        <text>{{item.text}}</text>
+        <text class="list-goto">></text>
+      </view>
+    </navigator>
+    <button class="logOut">退出登录</button>
+  </view>
+</view>

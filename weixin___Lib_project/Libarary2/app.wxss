@@ -1,0 +1,119 @@
+/**app.wxss**/
+.container{
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+} 
+/**app.wxss**/
+@import 'weui.wxss';
+
+page{
+   height: 100%;
+   background-color: #fbf9fe;
+}
+
+.flex-wrp-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-wrp-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item{
+  flex: 1;
+}
+
+
+.flex-row{
+	display: flex;
+  width: 100%;
+  box-sizing: border-box
+}
+
+.flex-item-10{
+  flex: 0 0 10%;
+  max-width: 10%;
+  box-sizing: border-box;
+}
+.flex-item-20{
+  flex: 0 0 20%;
+  max-width: 20%;
+  box-sizing: border-box;
+}
+.flex-item-25{
+  flex: 0 0 25%;
+  max-width: 25%;
+  box-sizing: border-box;
+}
+.flex-item-33{
+  flex: 0 0 33%;
+  max-width: 33%;
+  box-sizing: border-box;
+}
+.flex-item-50{
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+.flex-item-66{
+  flex: 0 0 66%;
+  max-width: 66%;
+  box-sizing: border-box;
+}
+.flex-item-75{
+  flex: 0 0 75%;
+  max-width: 75%;
+  box-sizing: border-box;
+}
+.flex-item-80{
+  flex: 0 0 80%;
+  max-width: 80%;
+  box-sizing: border-box;
+}
+.flex-item-90{
+  flex: 0 0 90%;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+.flex-item-100{
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.wx-grid{
+  width:100%;
+  overflow: hidden;
+}
+.wx-grid-item{
+  float: left;
+  width: 33.3%;
+  box-sizing: border-box;
+}
+
+.mobi_title{
+	font-size: 15px;
+	color: #777;
+  line-height: 110%;
+  font-weight: normal;
+	width: 100%;
+  padding: 10px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+.mobi_icon{
+	padding: 0px 1.5px;
+  border-radius: 1.5px;
+  background-color: #ff7777;
+  position: relative;
+  margin-right: 5px;
+}

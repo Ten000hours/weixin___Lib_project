@@ -1,0 +1,24 @@
+Page{
+  background: url("../../img/background.jpg") center fixed;
+  height: 100%;
+  width: 100%;
+}
+.mask{
+  width:100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.2;
+  position: absolute;
+  position: fixed;
+}
+.list{
+    position: relative;
+}
+image{
+  width: 200rpx;
+  height: 270rpx;
+  display: inline-block;
+  margin: 30rpx 0rpx 0rpx 38rpx;
+  position: relative;
+  box-shadow: 5px 0px 15px #000;
+}

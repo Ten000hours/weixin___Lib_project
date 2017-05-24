@@ -1,0 +1,11 @@
+<view class="page">
+<scroll-view class="scr" scroll-y="true" bindscroll="scroll">
+<view class="imgbox"><image class="poster" src="/../../img/8.png" mode="center"></image></view>
+<view ><text class="juzhong" style="">读经典书，做书香人 
+ </text></view><view>
+ <view class="time" ><text>时间：2017年4月23日上午9:00</text></view>
+ <view class="place"><text>地点：广西大学图书馆六楼报告厅</text></view>
+ <view class="content"><text>活动内容：为激发学院师生的读书热情，结合开放式读书教学活动，广西大学图书馆与广西大学新闻传播学院于4月23日上午联合举办读书分享会，长征三部曲作家伍禄香、新闻传播学院保送南京大学学生方舢将分享对他们而言最有意义的一本书，并通过讲述自己与书的故事，来鼓励青年学生多多阅读。
+届时，现场将会有300多名师生到场聆听，人民网广西频道将进行新闻报道、微博直播等系列活动</text></view></view>
+</scroll-view>
+</view>

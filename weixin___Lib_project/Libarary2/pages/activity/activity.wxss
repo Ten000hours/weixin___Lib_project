@@ -1,0 +1,27 @@
+.imgbox{
+  height: 600rpx;
+  width: 100rpx;
+}
+
+.juzhong{
+  font-size: 55rpx;
+  margin-left:140rpx;
+}
+
+.scr{
+  height: 1880rpx;
+}
+
+.time{
+  margin-left:40rpx;
+  background-color: lightcyan;
+
+  }
+
+.place{
+  margin-left: 40rpx;
+  background-color: lightpink;
+}
+.content{
+  margin-left: 40rpx;
+}

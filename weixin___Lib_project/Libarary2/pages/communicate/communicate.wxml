@@ -1,0 +1,18 @@
+<view class="mask">
+</view>
+<view class="communicates">
+  <view class="item touch-active" wx:for-items="{{communicates}}" wx:key="idx" wx:for-item="list">
+    <view class="item-right">
+      <view class="top">
+        <text class="user-name">{{list.userName}}</text>
+        <text class="time">{{list.communicateTime}}</text>
+      </view>
+
+      <!--评论内容-->
+      <view class="item-content">
+        {{list.communicateContent}}
+      </view>
+    </view>
+  </view>
+</view>
+<image src="../../img/pen.png" class="input-icon" bindtap="gotoMyView"></image>

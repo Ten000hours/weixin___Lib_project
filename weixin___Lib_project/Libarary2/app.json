@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/me/me",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/activity/activity",
+    "pages/communicate/communicate",
+    "pages/myborrow/myborrow",
+    "pages/detail/detail",
+    "pages/signUp/signUp",
+    "pages/myView/myView"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/087.png",
+        "selectedIconPath": "/img/097.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查找",
+        "iconPath": "/img/035.png",
+        "selectedIconPath": "/img/097.png"
+      },
+      {
+        "pagePath": "pages/communicate/communicate",
+        "text": "交流",
+        "iconPath": "/img/009.png",
+        "selectedIconPath": "/img/097.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "/img/047.png",
+        "selectedIconPath": "/img/097.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "无微不至的借阅伴侣",
+    "navigationBarTextStyle": "black"
+  }
+}
