@@ -1,5 +1,6 @@
 <view class="mask">
 </view>
-<block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.id">
-    <image class="video-img" src="list.img"></image>
+<view >my order list</view>
+<block wx:for-items="{{order}}" wx:for-item="order" wx:key="order.id">
+    <image class="book-img" src="order.img"></image>
 </block>

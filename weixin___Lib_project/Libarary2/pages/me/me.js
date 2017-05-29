@@ -21,7 +21,7 @@ Page({
       {
         text: '我的预约',
         icon: '/img/089.png',
-        url: ''
+        url: '../order/order'
       },
       {
         text: '我的收藏',

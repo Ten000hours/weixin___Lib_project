@@ -20,7 +20,7 @@ function query($sql){
     }
     echo json_encode($jarr);
 }
-function insert($sql){
+function basic($sql){
     $conn=new mysqli(HOST, USER_NAME, USER_PW) or die('´íÎó');
     if (mysqli_connect_errno($conn))
     {
@@ -36,5 +36,32 @@ function insert($sql){
         echo 0;
     }
     @mysqli_close($conn);
+}
+function insert($sql){
+    basic($sql);
+}
+function delete($sql){
+    basic($sql);
+}
+function update($sql){
+    basic($sql);
+}
+function check($sql){
+    $conn=new mysqli(HOST, USER_NAME, USER_PW) or die('´íÎó');
+    if (mysqli_connect_errno($conn))
+   { 
+    echo "Á¬½Ó MySQL Ê§°Ü: " . mysqli_connect_error(); 
+   } 
+    mysqli_query("set names 'utf-8'");
+    mysqli_select_db($conn,DB_NAME) or die('Êý¾Ý¿â´íÎó');
+    $result=@mysqli_query($conn,$sql)or die('sqlÖ´ÐÐ´íÎó') or die('sqlÖ´ÐÐ´íÎó');
+    $num=@mysqli_num_rows($result);
+    @mysqli_close($conn);
+    if($num==1){
+        echo 1;
+    }
+    else{
+    	echo 0;
+    }
 }
 ?>

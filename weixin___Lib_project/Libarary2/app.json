@@ -6,6 +6,7 @@
     "pages/activity/activity",
     "pages/communicate/communicate",
     "pages/myborrow/myborrow",
+    "pages/order/order",
     "pages/detail/detail",
     "pages/signUp/signUp",
     "pages/myView/myView"

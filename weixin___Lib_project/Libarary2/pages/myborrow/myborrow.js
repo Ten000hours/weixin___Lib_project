@@ -20,7 +20,7 @@ myborrow:[{
     {
     'id':3,
     'img':"https://img3.doubanio.com/lpic/s29166331.jpg",
-    'title':"晓松奇谈·世界卷",
+    'title':"晓松奇谈",
     'author':"高晓松",
     "borrowday":"2016/01/01",
     "returnday":"2016/01/30",
