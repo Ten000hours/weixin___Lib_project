@@ -25,37 +25,28 @@
     </view>
   </view>
 
-  <!-- <view class="button">
-    <button class="button-item" type="primary">借阅</button>
-    <button class="button-item" type="warn">预定</button>
-    <button class="button-item" type="default">收藏</button>
-  </view>-->
   <view class="brief-view">
-    <view>【内容简介】</view>
-    <view class="brief-view-content">{{lists[0].bookBriefIntro}}</view>
+    <view class="breif-view-title">【内容简介】</view>
+    <text class="brief-view-content">{{lists[0].bookBriefIntro}}</text>
   </view>
   <view class="brief-view">
-    <view>【作者简介】</view>
-    <view class="brief-view-content">{{lists[0].bookWriterInfor}}</view>
+    <view class="breif-view-title">【作者简介】</view>
+    <text class="brief-view-content">{{lists[0].bookWriterInfor}}</text>
   </view>
   <view class="brief-view">
-    <view>【目录】</view>
-    <view class="brief-view-content">{{lists[0].bookCatalog}}</view>
+    <view class="breif-view-title">【目录】</view>
+    <text class="brief-view-content">{{lists[0].bookCatalog}}</text>
   </view>
 </view>
 <view class="standAplace">
 </view>
 <view class="bottom">
-  <view class="bottom-favorite">
-    <image src="../../img/favorite.png" class="bottom-icon"></image>
-    <view>收藏</view>
+  <view class="bottom-favorite" bindtap="favorite">
+    <image src="{{favorited?imgFavored:imgFavor}}" class="bottom-icon"></image>
+    <view style="{{favorited?colored:color}}">{{favorited?txtFavored:txtFavor}}</view>
   </view>
-  <view class="bottom-order">
-    <image src="../../img/order.png" class="bottom-icon"></image>
-    <view>预订</view>
-  </view>
-  <view class="bottom-borrow">
-    <image src="../../img/borrow.png" class="bottom-icon"></image>
-    <view>借阅</view>
+  <view class="bottom-order" bindtap="order">
+    <image src="{{ordered?imgOrdered:imgOrder}}" class="bottom-icon"></image>
+    <view style="{{ordered?colored:color}}">{{ordered?txtOrdered:txtOrder}}</view>
   </view>
 </view>

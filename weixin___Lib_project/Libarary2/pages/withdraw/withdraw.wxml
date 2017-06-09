@@ -1,0 +1,17 @@
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text class="header-title">提现</text>
+</view>
+<view class="standAplace">
+</view>
+<view class="warning" wx:if="{{warning!=''}}">
+  {{warning}}
+</view>
+<view class="trans">
+    <text class="trans-title">银行卡</text>
+    <view class="trans-bank">中国工商银行(6789)</view>
+    <text class="trans-title">金额(￥)</text>
+    <input class="trans-account" placeholder="请输入提现金额"  auto-focus="true"  bindinput="getAccount" />
+</view>
+<button class="comfirm" bindtap="withdraw">提现</button>
+

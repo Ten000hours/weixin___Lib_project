@@ -1,5 +1,10 @@
 <view class="mask">
 </view>
+<view class="header">
+  <input class="header-input" placeholder="请输入书名、作者、类型等" bindinput="inputChange" />
+  <image src="../../img/scan.png" class="header-scan" bindtap="scan"></image>
+  <image src="../../img/search.png" class="header-search" bindtap="gotoSearchByKey"></image>
+</view>
 <view class="swiper">
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height: 380rpx;">
     <block wx:for="{{imgUrls}}" wx:key="item.id">
@@ -9,21 +14,54 @@
     </block>
   </swiper>
 </view>
-<view class="classification">
-  <image src="../../img/heart.png" class="classification-icon"></image>
-  <text class="classification-recommand">为您精心推荐:</text>
+<view class="header-type" id="header-special">
+  <image src="../../img/hot.png" class="header-icon"></image>
+  <text>热门推荐:</text>
 </view>
-<view>
-  <image  class="book" src="img/1.png" bindtap="gotoDetail"></image>
-  <image  class="book" src="img/2.png"></image>
-  <image  class="book" src="img/3.png"></image>
+<view class="insideBox">
+  <block wx:for-items="{{hotLists}}" wx:for-item="list" wx:key="list.bookId">
+    <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+      <view class="list-img">
+        <image class="video-img" src="{{list.bookImgPath}}"></image>
+      </view>
+      <view class="list-detail">
+        <view class="list-title">
+          <text>{{list.bookName}}</text>
+        </view>
+        <view class="list-infor">
+          <text> {{list.bookWriterName}}</text>|
+          <text>{{list.bookPublisher}}</text>
+        </view>
+        <view class="list-brief">{{list.bookBriefIntro}}...</view>
+      </view>
+    </view>
+  </block>
 </view>
-<view class="shelf">
+<view style="display:{{display}};">
+  <view class="header-type">
+    <image src="../../img/recommend.png" class="header-icon"></image>
+    <text>为您精心推荐:</text>
+  </view>
+  <view class="insideBox">
+    <block wx:for-items="{{perLists}}" wx:for-item="list" wx:key="list.bookId">
+      <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+        <view class="list-img">
+          <image class="video-img" src="{{list.bookImgPath}}"></image>
+        </view>
+        <view class="list-detail">
+          <view class="list-title">
+            <text>{{list.bookName}}</text>
+          </view>
+          <view class="list-infor">
+            <text> {{list.bookWriterName}}</text>|
+            <text>{{list.bookPublisher}}</text>
+          </view>
+          <view class="list-brief">{{list.bookBriefIntro}}...</view>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>
-<view>
-  <image  class="book" src="img/4.png"></image>
-  <image  class="book" src="img/5.png"></image>
-  <image class="book" src="img/6.png"></image>
-</view>
-<view class="shelf">
-</view>
+<modal bindconfirm="borrow" bindcancel="hide" hidden="{{hide}}">
+  <text>{{content}}</text>
+</modal>

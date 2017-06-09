@@ -1,0 +1,16 @@
+<view class="mask">
+</view>
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text class="header-title">选择取书日期</text>
+  <text bindtap="order" class="header-order">预订</text>
+</view>
+<view class="standAplace">
+</view>
+<view class="section">  
+  <picker mode="date" value="{{date}}" start="{{today}}"end="{{endDate}}" bindchange="dateChange">  
+    <view class="picker">  
+      日期: {{date}}  
+    </view>  
+  </picker>  
+</view>  

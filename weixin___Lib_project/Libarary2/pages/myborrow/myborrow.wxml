@@ -1,21 +1,26 @@
 <view class="mask">
 </view>
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text class="header-title">当前借阅数:{{lists.length}}</text>
+</view>
+<view class="standAplace">
+</view>
 <scroll-view class="box" scroll-y="true" bindscroll="scroll">
-  <view class="borrowed-num">当前借阅数:6</view>
   <view class="insideBox">
     <view style="display:">
-      <block wx:for="{{myborrow}}" wx:for-item="list" wx:key="list.id">
-        <view class="list">
+      <block wx:for="{{lists}}" wx:for-item="list" wx:key="list.bookId">
+        <view class="list" id="{{list.bookId}}" bindtap="gotoBorrowQR">
           <view>
-            <image class="list-img" src="{{list.img}}"></image>
+            <image class="list-img" src="{{list.bookImgPath}}"></image>
           </view>
           <view class="list-detail">
             <view class="list-title">
-              <text>{{list.title}}</text>
+              <text>{{list.bookName}}</text>
             </view>
-            <view class="list-author">作者： {{list.author}}</view>
-            <view class="list-borrow">借阅日期： {{list.borrowday}}</view>
-            <view class="list-return">到期日期： {{list.returnday}}</view>
+            <view class="list-author">作者： {{list.bookWriterName}}</view>
+            <view class="list-borrow">借阅日期： {{list.borrowTime}}</view>
+            <view class="list-return">到期日期： {{list.returnTime}}</view>
           </view>
         </view>
       </block>

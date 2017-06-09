@@ -1,83 +1,58 @@
 page {
-  background-color:white;
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") fixed;
+  background-size: 100% 100%;
+  width: 100%;
   height: 100%;
-}
-.container2{
-    margin-top: 0rpx;
+  font-family: "微软雅黑";
 }
 
-.page__hd{
-    padding: 50rpx 50rpx 100rpx 50rpx;
-    text-align: center;
-}
-.page__title{
-    display: inline-block;
-    padding: 20rpx 40rpx;
-    font-size: 32rpx;
-    color: #AAAAAA;
-    border-bottom: 1px solid #CCCCCC;
-}
-.page__desc{
-    display: none;
-    margin-top: 20rpx;
-    font-size: 26rpx;
-    color: #BBBBBB;
-}
-.section{
-    margin-bottom: 30rpx;
-}
-.section__title{
-    margin-bottom: 16rpx;
-    padding-left: 30rpx;
-    padding-right: 30rpx;
-}
-.picker{
-  padding: 26rpx;
-  background-color: #FFFFFF;
-}
-.item1{
-display:flex;
-position:relative;
-left: 80rpx;
-top:50rpx;
-}
-.item2{
-    display:flex;
-    position:relative;
-    left: 42rpx;
-    top: 80rpx;
-}
-.item3{
-    display:flex;
-    position:relative;
-    left: 118rpx;
-    top: 110rpx;
-}
-.item4{
-    display:flex;
-    position:relative;
-    left: 42rpx;
-    top: 140rpx;
-}
-.box1{
-border-radius:5%;
-height:50rpx;
-width:350rpx;
-background-color:white;
-border: 1px solid #a1a1a1
+.mask {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.6;
+  position: absolute;
+  position: fixed;
+  z-index: -1;
 }
 
-.container1{
-    margin-top:100rpx;
-    width: 750rpx;
-    height: 400rpx;
-    background-image: url();
+.warning{
+  text-align: center;
+  background: #FF6347;
+  line-height: 80rpx;
 }
 
-.button-hover {
-  background-color: red;
+.register {
+  margin: 0rpx 26rpx;
+  padding-top: 140rpx;
 }
 
-.other-button-hover {
-  background-color: limegreen;
+.item {
+  border-bottom: solid 1rpx #cdc5bf;
+  padding: 20rpx 0rpx 0rpx 0rpx;
+  margin-bottom: 30rpx;
+}
+
+.instruction {
+  color: #333;
+  font-size: 36rpx;
+  margin-bottom: 21rpx;
+  display: inline-block;
+}
+
+.register-txt {
+  width: 520rpx;
+  position: relative;
+  font-size: 35rpx;
+  color: #333;
+  top: 12rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.registet-btn{
+  color: black;
+  font-size: 33rpx;
+  padding:8rpx;
+  margin: 80rpx 26rpx 0rpx 26rpx;
 }

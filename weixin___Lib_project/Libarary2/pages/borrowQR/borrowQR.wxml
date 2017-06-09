@@ -1,0 +1,5 @@
+<view class="container-box">
+    <view class="img-box">
+        <canvas  hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+    </view>
+</view>

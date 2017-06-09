@@ -1,0 +1,88 @@
+page {
+  background: #f0f0f0;
+  font-family: "微软雅黑";
+}
+
+.header {
+  height: 118rpx;
+  width: 100%;
+  background: #333;
+  position: fixed;
+  z-index: 2;
+}
+
+.header-return {
+  width: 70rpx;
+  height: 70rpx;
+  position: relative;
+  left: 26rpx;
+  top: 10.5px;
+}
+
+.header-title {
+  color: #148cca;
+  position: relative;
+  left: 275rpx;
+}
+
+.standAplace {
+  height: 118rpx;
+}
+
+.warning{
+  text-align: center;
+  background: #FF6347;
+  line-height: 80rpx;
+}
+
+.trans {
+  margin-top: 40rpx;
+}
+
+.trans-title {
+  background: white;
+  width: 150rpx;
+  height: 110rpx;
+  float: left;
+  padding-left: 20rpx;
+  line-height: 110rpx;
+  font-size: 30rpx;
+}
+
+.trans-bank {
+  background: white;
+  width: 750rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  padding-left: 200rpx;
+  color: #36648b;
+  border-bottom: solid 1rpx #f0f0f0;
+  font-size: 30rpx;
+}
+
+.trans-account {
+  background: white;
+  width: 530rpx;
+  height: 110rpx;
+  padding-left: 50rpx;
+  font-size: 30rpx;
+}
+
+.trans-limit{
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  color: gray;
+}
+
+.comfirm {
+  clear: both;
+  margin: 80rpx 20rpx 0rpx 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #32cd32;
+  border-radius: 5rpx;
+  font-size: 33rpx;
+  border: 0rpx;
+  color: white;
+}

@@ -1,0 +1,87 @@
+<view class="cont">
+  <view class="forbalance">
+    <view class="fornum">
+      <image class="icon" src="../../img/cash.png"></image>
+      <view class="num">零钱</view>
+      <view class="num">￥{{account}}</view>
+    </view>
+  </view>
+  <view class="order">
+    <view class="title">
+      <view wx:for="{{tabs}}" wx:key="{{index}}" data-id="{{index}}" wx:for-item="tab" class="tab{{index == activeTab ? ' active' : ''}}" bindtap="changeItem">{{tab}}</view>
+    </view>
+    <swiper current="{{activeTab}}" class="pages" bindchange="itemChange">
+      <swiper-item class="item">
+        <view class="insideBox">
+          <view style="display:">
+            <block wx:for="{{lists}}" wx:for-item="list" wx:key="list.id">
+              <view class="list">
+                <view>
+                  <image class="list-img" src="{{list.bookImgPath}}"></image>
+                </view>
+                <view class="list-detail">
+                  <view class="list-title">
+                    <text>{{list.bookName}}</text>
+                  </view>
+                  <view class="list-author">作者： {{list.bookWriterName}}</view>
+                  <view>订单时间：{{list.borrowTime}}</view>
+                  <view class="list-pay">应付金额： {{list.bookPrice}}元</view>
+                </view>
+                <view class="list-btn">
+                  <view class="btn" style="background: #6495ED;color: white;" bindtap="payForDeposit" id="{{index}}">付款</view>
+                  <view class="btn" style="background: #EAEAEA;color:  #6495ED;">取消</view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="item">
+        <view class="insideBox">
+          <view style="display:">
+            <block wx:for="{{lists1}}" wx:for-item="list" wx:key="list.id">
+              <view class="list" id="list.bookId" bindtap="gotoBorrowQR">
+                <view>
+                  <image class="list-img" src="{{list.bookImgPath}}"></image>
+                </view>
+                <view class="list-detail">
+                  <view class="list-title">
+                    <text>{{list.bookName}}</text>
+                  </view>
+                  <view class="list-author">作者： {{list.bookWriterName}}</view>
+                  <view>借书时间：{{list.borrowTime}}</view>
+                  <view>最迟还书时间： {{list.returnTime}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="item">
+        <view class="insideBox">
+          <view style="display:">
+            <block wx:for="{{lists2}}" wx:for-item="list" wx:key="list.id">
+              <view class="list">
+                <view>
+                  <image class="list-img" src="{{list.bookImgPath}}"></image>
+                </view>
+                <view class="list-detail">
+                  <view class="list-title">
+                    <text>{{list.bookName}}</text>
+                  </view>
+                  <view class="list-author">作者： {{list.bookWriterName}}</view>
+                  <view>借书时间：{{list.borrowTime}}</view>
+                  <view>还书时间： {{list.returnTime}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
+<view class="forbut">
+  <view class="but" style="background: #6495ED; color:#fff;" bindtap="gotoRecharge">充值</view>
+  <view class="but" style="background:#fff; color: #6495ED;" bindtap="gotoWithdraw">提现</view>
+</view>

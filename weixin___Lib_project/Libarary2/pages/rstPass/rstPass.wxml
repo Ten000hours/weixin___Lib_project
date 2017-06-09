@@ -1,0 +1,35 @@
+<view class="mask">
+</view>
+<view class="warning" wx:if="{{warning!=''}}">
+  {{warning}}
+</view>
+<view class="comfirm" wx:if="{{!boolComfirm}}">
+  <view class="comfirm">
+    <view class="comfirm-form">
+      <view class="input">
+        <view class="instruction">账号</view>
+        <input placeholder="用户名" class="comfirm-txt" bindinput="getUserName" />
+      </view>
+      <view class="input">
+        <view class="instruction">证件号</view>
+        <input placeholder="用户身份证号" class="comfirm-txt" bindinput="getIdNum" />
+      </view>
+      <button class="comfirm-btn" bindtap="comfirm">确定</button>
+    </view>
+  </view>
+</view>
+<view class="rst" wx:if="{{boolComfirm}}">
+  <view class="rst">
+    <view class="rst-form">
+      <view class="input">
+        <text class="instruction">新密码:</text>
+        <input minlength="8" maxlength="16" type="text" password="ture" class="rst-txt" bindinput="getPassword" />
+      </view>
+      <view class="input">
+        <text class="instruction">确认:</text>
+        <input minlength="8" maxlength="16" type="text" password="ture" class="rst-txt" bindinput="getComfirm" />
+      </view>
+      <button class="rst-btn" bindtap="reset">重置</button>
+    </view>
+  </view>
+</view>

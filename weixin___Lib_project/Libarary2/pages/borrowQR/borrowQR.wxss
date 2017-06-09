@@ -1,0 +1,25 @@
+.container-box {
+  background-color: #efeff4;
+}
+
+.img-box {
+  padding: 32rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.img-box image {
+  width: 686rpx;
+  height: 686rpx;
+  background-color: #f9f9f9;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

@@ -1,0 +1,133 @@
+page {
+  background: #f0f0f0;
+  font-family: "微软雅黑";
+}
+
+.forbalance {
+  height: 200rpx;
+  width: 100%;
+  padding-top: 40rpx;
+  background: #404040;
+}
+
+.forbalance .fornum {
+  height: 160rpx;
+  width: 400rpx;
+  margin: auto;
+}
+
+.fornum .icon {
+  width: 75rpx;
+  height: 75rpx;
+  margin-left: 162.5rpx;
+}
+
+.forbalance .num {
+  font-size: 30rpx;
+  color: white;
+  text-align: center;
+}
+
+.order {
+  margin-top: 20rpx;
+  height: 100%;
+}
+
+.order .title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  height: 80rpx;
+}
+
+.order .title .tab {
+  position: relative;
+  height: 80rpx;
+  color: black;
+  line-height: 80rpx;
+}
+
+.order .title .tab.active {
+  color: limegreen;
+}
+
+.insideBox {
+  background: #FAFAFA;
+  border-bottom: solid lightgray 1rpx;
+}
+
+.pages{
+  height: 750rpx;
+}
+
+.list {
+  height: 200rpx;
+  border: solid lightgray 1rpx;
+  color: gray;
+  overflow: hidden;
+  border-left: 0rpx;
+  border-right: 0rpx;
+  border-bottom: 0rpx;
+}
+
+.list-img {
+  width: 135rpx;
+  height: 180rpx;
+  margin: 10rpx 40rpx 0rpx 20rpx;
+  float: left;
+}
+
+.list-detail {
+  margin-left: 90rpx;
+  font-size: 30rpx;
+  margin-top: 22rpx;
+}
+
+.list-pay{
+  font-size: 40rpx;
+  color: #6495ED;
+}
+
+.list-title {
+  width: 100%;
+  font-size: 32rpx;
+  color: #3b3b3b;
+  font-weight: bold;
+  margin-top: 15rpx;
+}
+
+.list-btn{
+  width: 130rpx;
+  float: right;
+  position: relative;
+  bottom: 180rpx;
+}
+
+.btn{
+  width: 120rpx;
+  height: 70rpx;
+  border-radius: 5rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-right: 20rpx;
+  font-size: 32rpx;
+}
+
+.forbut {
+  width: 100%;
+  position: absolute;
+  position: fixed;
+  bottom: -1rpx;
+  z-index: 1;
+}
+
+.forbut .but {
+  width: 50%;
+  float: left;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+  border-radius: 0rpx;
+}

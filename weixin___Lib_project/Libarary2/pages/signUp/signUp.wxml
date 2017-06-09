@@ -1,46 +1,28 @@
-<view class="container1">
- 
-<view class="item1">
-用户名:<input style="border: 1px solid;border-color:#a1a1a1;width:60%;" 
- maxlength="12" type="text" focus="false"/>
+<view class="mask">
 </view>
- 
-<view class="item2">
-身份证号:<input style="border: 1px solid;border-color:#a1a1a1;width:60%;" 
-length="18" type="text" focus="false"/>
+<view class="warning" wx:if="{{warning!=''}}">
+  {{warning}}
 </view>
- 
-<view class="item3">
-密码:<input style="border: 1px solid;border-color:#a1a1a1;width:60%;" 
-minlength="8" maxlength="16" type="text" focus="false" password="ture"/>
-</view>
- 
-<view class="item4">
-确认密码:<input style="border: 1px solid;border-color:#a1a1a1;width:60%;" 
-minlength="8" maxlength="16" type="text" focus="false" password="ture"/>
-</view>
-</view>
-
-<view class="page">
-   <view class='container2'>
-  <view class="page__hd">
-    <text class="page__title">我们将会根据此来为您推荐图书</text>
+<view class="register">
+  <view class="item">
+    <text class="instruction">用户名:</text>
+    <input  maxlength="12" type="text"  class="register-txt" bindinput="getUserName"/>
   </view>
-
-  <view class="page__bd">
-    <view class="section">
-      <view class="section__title">我喜欢的图书类型</view>
-      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <view class="picker">
-          当前选择：{{array[index]}}
-        </view>
-      </picker>
-    </view>
-
+  <view class="item">
+    <text class="instruction">手机号:</text>
+    <input maxlength="11" type="text" class="register-txt" bindinput="getPhoneNum"/>
   </view>
+  <view class="item">
+    <text class="instruction">身份证号:</text>
+    <input maxlength="18" type="text"  class="register-txt" bindinput="getIdNum"/>
+  </view>
+  <view class="item">
+    <text class="instruction" >输入密码:</text>
+    <input minlength="8" maxlength="16" type="text"  password="ture" class="register-txt" bindinput="getPassword"/>
+  </view>
+  <view class="item">
+    <text class="instruction">确认密码:</text>
+    <input minlength="8" maxlength="16" type="text" password="ture" class="register-txt" bindinput="getComfirm"/>
   </view>
 </view>
-
-<button style=" top:50rpx;left:160rpx;" type="primary" size="mini"> 注册 </button>
-
-<button style=" top:50rpx;left:330rpx;" type="warn" size="mini">登入</button>
+<button class="registet-btn" bindtap="register" style="background:{{submit?color1:color2}};"> 注册 </button>

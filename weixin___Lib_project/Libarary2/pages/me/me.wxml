@@ -5,33 +5,64 @@
     <view class="login-form">
       <view class="input">
         <view class="instruction">账号</view>
-        <input placeholder="用户名/手机号" class="login-txt" bindinput="getUserName"/>
+        <input placeholder="用户名/手机号" class="login-txt" bindinput="getUserName" />
       </view>
       <view class="input">
         <view class="instruction">密码</view>
-        <input placeholder="请输入密码" class="login-txt" password="ture" bindinput="getPassword"/>
+        <input placeholder="请输入密码" class="login-txt" password="ture" bindinput="getPassword" />
       </view>
       <button class="login-btn" bindtap="login">登录</button>
     </view>
     <view class="forget-reg">
-      <text class="forget">忘记密码</text>
-      <text class="reg">注册</text>
+      <text class="forget" bindtap="forgetPass">忘记密码</text>
+      <text class="reg" bindtap="gotoRegister">注册</text>
     </view>
   </view>
 </view>
+
+
+
 <view class="online" wx:if="{{online}}">
   <view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userName}}</text>
   </view>
   <view class="detail">
-    <navigator url="{{item.url}}" wx:for="{{meList}}" wx:key="text">
-      <view class="list">
-        <image src="{{item.icon}}" style="margin-right: 15px;vertical-align: middle;width:20px; height: 20px;"></image>
-        <text>{{item.text}}</text>
-        <text class="list-goto">></text>
-      </view>
-    </navigator>
-    <button class="logOut">退出登录</button>
+    <view class="list" bindtap="gotoMyBorrow">
+      <image src="/img/borrow.png" class="list-icon"></image>
+      <text>我的借阅</text>
+      <image class="list-new" src="../../img/new.png" wx:if="{{newBorrow}}"></image>
+      <text class="list-goto">></text>
+    </view>
+    <view class="list" bindtap="gotoMyMsg">
+      <image src="/img/message.png" class="list-icon"></image>
+      <text>我的消息</text>
+      <image class="list-new" src="../../img/new.png" wx:if="{{newMsg}}"></image>
+      <text class="list-goto">></text>
+    </view>
+    <view class="list" bindtap="gotoMyOrder">
+      <image src="/img/order.png" class="list-icon"></image>
+      <text>我的预订</text>
+      <image class="list-new" src="../../img/new.png" wx:if="{{newOrder}}"></image>
+      <text class="list-goto">></text>
+    </view>
+    <view class="list"  bindtap="gotoMyFavorite">
+      <image src="/img/heart.png" class="list-icon"></image>
+      <text>我的收藏</text>
+      <image class="list-new" src="../../img/new.png" wx:if="{{newFavor}}"></image>
+      <text class="list-goto">></text>
+    </view>
+    <view class="list" bindtap="gotoMyWallet">
+      <image src="/img/wallet.png" class="list-icon"></image>
+      <text>我的钱包</text>
+      <image class="list-new" src="../../img/new.png" wx:if="{{newWallet}}"></image>
+      <text class="list-goto">></text>
+    </view>
+     <view class="list" bindtap="gotoMySafety">
+      <image src="/img/safety.png" class="list-icon" ></image>
+      <text>我的安全</text>
+      <text class="list-goto">></text>
+    </view>
+    <button class="logout" bindtap="logout">退出登录</button>
   </view>
 </view>

@@ -1,65 +1,132 @@
-Page{
-  background: url("http://www.siliangjiadan.cn/img/background.jpg") center fixed;
+Page {
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") center fixed;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
 }
-.mask{
-  width:100%;
+
+.mask {
+  width: 100%;
   height: 100%;
   background: #fff;
-  opacity: 0.2;
+  opacity: 0.4;
   position: absolute;
-  position:fixed;
+  position: fixed;
+  z-index: -1;
 }
-.slide-image{
+
+.header {
+  height: 80rpx;
   width: 100%;
-  margin: 0;
-  height: 450rpx;
-  box-shadow: 10px 0px 10px #000;
+  padding-top: 15rpx;
+  position: fixed;
+  z-index: 1;
 }
-.classification{
-  height: 70rpx;
-  background: #E6E6FA;
-  font-size:35rpx;
-  font-family: "微软雅黑";
-  font-weight: bold;
-}
-.classification-icon{
-  width: 36rpx;
-  height: 36rpx;
-  margin: 18rpx -40rpx 0rpx 50rpx;
-  float: left;
-}
-.classification-recommand{
-  margin-left: 50rpx;
-  line-height: 70rpx;
-  float: left;
-}
-.shelf{
-  width: 700rpx;
-  height: 20rpx;
-  margin: auto;
-  background: gray;
-  box-shadow: 0px 5px 10px #000;
-}
-.book{
-  width: 183rpx;
-  height: 244rpx;
-  display: inline-block;
-  margin: 30rpx -12rpx 0rpx 60rpx;
+
+.header-scan {
+  width: 75rpx;
+  height: 75rpx;
   position: relative;
-  box-shadow: 5px 0px 15px #333;
+  bottom: 74rpx;
+  left: 23rpx;
 }
-.header{
-  padding-top:80rpx;  
+
+.header-search {
+  width: 75rpx;
+  height: 75rpx;
+  float: right;
+  position: relative;
+  bottom: 73rpx;
+  right: 23rpx;
 }
-.header-input{
-  width: 600rpx;
-  height: 90rpx;
+
+.header-input {
+  width: 520rpx;
+  height: 70rpx;
   margin: auto;
-  border-radius: 40rpx;
   background: white;
-  font-family: "微软雅黑";
+  border-radius: 10rpx;
   text-align: center;
+  font-size: 33rpx;
+}
+
+.swiper {
+  top: 0px;
+  width: 100%;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+#header-special{
+  border-top: none;
+}
+
+.header-type {
+  font-family: "微软雅黑";
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 25rpx;
+  border-top: solid lightgray 1rpx;
+  border-bottom: solid lightgray 1rpx;
+}
+
+.header-icon {
+  height: 37rpx;
+  width: 37rpx;
+  position: relative;
+  top: 3.5rpx;
+}
+
+.header-type text {
+  position: relative;
+  color: #333;
+  left: 10rpx;
+}
+
+.insideBox {
+  margin: 0rpx 15rpx;
+}
+
+.list {
+  height: 150rpx;
+  font-family: "微软雅黑";
+  border-bottom: solid lightgray 1rpx;
+  color: gray;
+  overflow: hidden;
+}
+
+.list-img {
+  height: 140rpx;
+  float: left;
+}
+
+.video-img {
+  width: 105rpx;
+  height: 140rpx;
+  margin: 5rpx 40rpx 0rpx 10rpx;
+}
+
+.list-detail {
+  margin-left: 90rpx;
+}
+
+.list-title {
+  width: 100%;
+  font-size: 35rpx;
+  color: black;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.list-infor {
+  font-size: 29rpx;
+}
+
+.list-brief {
+  position: relative;
+  right: 12rpx;
+  font-size: 26rpx;
 }

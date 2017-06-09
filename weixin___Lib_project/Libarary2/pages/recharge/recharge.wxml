@@ -1,0 +1,18 @@
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text class="header-title">充值</text>
+</view>
+<view class="standAplace">
+</view>
+<view class="warning" wx:if="{{warning!=''}}">
+  {{warning}}
+</view>
+<view class="trans">
+    <text class="trans-title">银行卡</text>
+    <view class="trans-bank">中国工商银行(6789)</view>
+    <text class="trans-title">金额(￥)</text>
+    <input class="trans-account" placeholder="请输入充值金额" bindinput="getAccount" />
+    <view class="trans-limit">充值金额一次性不能超过200</view>
+</view>
+<button class="comfirm" bindtap="recharge">充值</button>
+

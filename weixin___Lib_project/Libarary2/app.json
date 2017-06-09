@@ -1,15 +1,23 @@
 {
   "pages": [
-    "pages/me/me",
     "pages/index/index",
     "pages/search/search",
     "pages/activity/activity",
     "pages/communicate/communicate",
-    "pages/myborrow/myborrow",
-    "pages/order/order",
+    "pages/me/me",
+    "pages/myBorrow/myBorrow",
     "pages/detail/detail",
+    "pages/myFavorite/myFavorite",
     "pages/signUp/signUp",
-    "pages/myView/myView"
+    "pages/myView/myView",
+    "pages/myOrder/myOrder",
+    "pages/recharge/recharge",
+    "pages/addOrder/addOrder",
+    "pages/borrowQR/borrowQR",
+    "pages/myMsg/myMsg",
+    "pages/myWallet/myWallet",
+    "pages/withdraw/withdraw",
+    "pages/rstPass/rstPass"
   ],
   "tabBar": {
     "list": [

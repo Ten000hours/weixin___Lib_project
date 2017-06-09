@@ -1,0 +1,65 @@
+page {
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") fixed;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.5;
+  position: absolute;
+  position: fixed;
+  z-index: -1;
+}
+
+.warning{
+  text-align: center;
+  background: #FF6347;
+  line-height: 80rpx;
+}
+
+.comfirm , .rst{
+  margin: 0rpx 26rpx;
+  padding-top: 140rpx;
+}
+
+.input {
+  border-bottom: solid 1rpx #cdc5bf;
+  padding: 20rpx 0rpx 0rpx 0rpx;
+  margin-bottom: 40rpx;
+}
+
+.instruction {
+  color: #333;
+  font-size: 36rpx;
+  margin-bottom: 21rpx;
+  display: inline-block;
+}
+
+.comfirm-txt , .rst-txt{
+  width: 520rpx;
+  position: relative;
+  font-size: 35rpx;
+  text-align: center;
+  color: #333;
+  top: 12rpx;
+  display: inline-block;
+}
+
+.comfirm-btn , .rst-btn{
+  clear: both;
+  border: 0;
+  color: black;
+  font-size: 30rpx;
+  padding: 8rpx;
+  background: #0e0;
+  margin-bottom: 30rpx;
+}
+
+.comfirm-btn:hover{
+  background: #00cd00;
+}

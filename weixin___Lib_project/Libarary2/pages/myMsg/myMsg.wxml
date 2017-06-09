@@ -1,0 +1,15 @@
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text class="header-title">我的消息</text>
+</view>
+<view class="standAplace">
+</view>
+<block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.messageId">
+  <view class="list" id="{{list.messageType}}">
+    <image src="{{list.message?img1:img2}}" class="list-icon"></image>
+    <view class="mask">
+      <text class="list-title">部分预约已到期，请及时前往图书馆取书</text>
+    </view>
+    <view class="list-time">{{list.messageTime}}</view>
+  </view>
+</block>
