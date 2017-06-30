@@ -1,0 +1,76 @@
+<view class="header">
+  <view class="header-name"> {{bookName}}</view>
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+</view>
+<view class="warning" wx:if="{{warning!=''}}">
+  {{warning}}
+</view>
+<view class="tab">
+  <view id="tab1" class="tab-item" style="{{boolBook?style1:style2}}" bindtap="chooseTab">书籍</view>
+  <view id="tab2" class="tab-item" style="{{boolAuthor?style1:style2}}" bindtap="chooseTab">作者简介</view>
+  <view id="tab3" class="tab-item" style="{{boolContent?style1:style2}}" bindtap="chooseTab">内容简介</view>
+  <view id="tab4" class="tab-item" style="{{boolCatalog?style1:style2}}" bindtap="chooseTab">目录</view>
+</view>
+<view class="main">
+  <view class="book" wx:if="{{boolBook}}">
+    <view>
+      <image class="bookimage" src="{{imgPath}}"></image>
+      <view class="book-upload" bindtap="chooseImg">
+        <image src="../../img/upload.png"></image>
+        <view>上传</view>
+      </view>
+    </view>
+    <view class="book-info">
+      <view class="book-info-style">
+        <text class="book-infor-title">书名: </text>
+        <input bindinput="getBookName" value="{{bookName}}" />
+        <text class="book-infor-title">作者: </text>
+        <input bindinput="getAuthor" value="{{bookWriterName}}" />
+        <text class="book-infor-title">价格: </text>
+        <input bindinput="getPrice" value="{{bookPrice}}" />
+        <text class="book-infor-title">版本号: </text>
+        <input bindinput="getVersionId" value="{{bookVersionID}}" />
+        <text class="book-infor-title">全拼: </text>
+        <input bindinput="getPhoneticize" value="{{bookPhoneticize}}" />
+        <text class="book-infor-title">在架位置: </text>
+        <input bindinput="getPosition" value="{{bookPosition}}" />
+        <text class="book-infor-title">出版信息: </text>
+        <input bindinput="getPublisher" value="{{bookPublisher}}" />
+        <text class="book-infor-title">出版时间: </text>
+        <picker mode="date" end="{{today}}" bindchange="getPublishTime">
+          <text class="book-time">{{bookPublishTime}}</text>
+        </picker>
+        <text class="book-infor-title">所属类别: </text>
+        <picker mode="selector" range="{{bookTypeArray}}" bindchange="getType">
+          <text class="book-type">{{bookType}}</text>
+        </picker>
+        <text class="book-infor-title">可借数量: </text>
+        <input bindinput="getCollectNum" value="{{bookCollectNum}}" />
+        <text class="book-infor-title">ISBN号: </text>
+        <input bindinput="getISBN" value="{{ISBN}}" />
+      </view>
+    </view>
+    <button class="btn" bindtap="updateBasicInfor">修改基本信息</button>
+  </view>
+  <view class="author" wx:if="{{boolAuthor}}">
+    <view class="brief-view">
+      <view class="breif-view-title">【作者简介】</view>
+      <textarea class="brief-view-content" value="{{bookWriterInfor}}" maxlength="8000" auto-height="true" bindinput="getAuthorInfo"/>
+    </view>
+    <button class="btn" bindtap="updateAuthor">修改作者信息</button>
+  </view>
+  <view class="author" wx:if="{{boolContent}}">
+    <view class="brief-view">
+      <view class="breif-view-title">【内容简介】</view>
+      <textarea class="brief-view-content" value="{{bookBriefIntro}}" maxlength="8000" auto-height="true" bindinput="getContent"/>
+    </view>
+    <button class="btn" bindtap="updateContent">修改简介</button>
+  </view>
+  <view class="author" wx:if="{{boolCatalog}}">
+    <view class="brief-view">
+      <view class="breif-view-title">【目录】</view>
+      <textarea class="brief-view-content" value="{{bookCatalog}}" maxlength="8000" auto-height="true" bindinput="getCatalog"/>
+    </view>
+    <button class="btn" bindtap="updateCatalog">修改</button>
+  </view>
+</view>

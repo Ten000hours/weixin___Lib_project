@@ -25,4 +25,4 @@
     <input minlength="8" maxlength="16" type="text" password="ture" class="register-txt" bindinput="getComfirm"/>
   </view>
 </view>
-<button class="registet-btn" bindtap="register" style="background:{{submit?color1:color2}};"> 注册 </button>
+<button class="registet-btn" bindtap="register" style="background:limegreen;"> 注册 </button>

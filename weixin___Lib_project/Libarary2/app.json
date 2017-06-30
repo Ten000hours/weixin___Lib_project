@@ -2,9 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/search/search",
-    "pages/activity/activity",
     "pages/communicate/communicate",
     "pages/me/me",
+    "pages/myWallet/myWallet",
     "pages/myBorrow/myBorrow",
     "pages/detail/detail",
     "pages/myFavorite/myFavorite",
@@ -15,8 +15,9 @@
     "pages/addOrder/addOrder",
     "pages/borrowQR/borrowQR",
     "pages/myMsg/myMsg",
-    "pages/myWallet/myWallet",
     "pages/withdraw/withdraw",
+    "pages/orderOnTime/orderOnTime",
+    "pages/borrowOnTime/borrowOnTime",
     "pages/rstPass/rstPass"
   ],
   "tabBar": {

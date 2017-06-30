@@ -1,0 +1,28 @@
+<scroll-view scroll-y="true" bindscroll="scroll">
+  <view class="header">
+    <input class="header-input" placeholder="请输入书名、作者、类型等" bindinput="inputChange" />
+    <image src="{{iconPath}}" class="header-scan" bindtap="scan"></image>
+    <image src="../../img/search.png" class="header-search" bindtap="searchByKey"></image>
+  </view>
+  <view class="standAplace">
+  </view>
+  <view class="insideBox">
+    <block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.bookId">
+      <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+        <view class="list-img">
+          <image class="video-img" src="{{list.bookImgPath}}"></image>
+        </view>
+        <view class="list-detail">
+          <view class="list-title">
+            <text>{{list.bookName}}</text>
+          </view>
+          <view class="list-infor">
+            <text> {{list.bookWriterName}}</text>|
+            <text>{{list.bookPublisher}}</text>
+          </view>
+          <view class="list-brief">{{list.bookBriefIntro}}...</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

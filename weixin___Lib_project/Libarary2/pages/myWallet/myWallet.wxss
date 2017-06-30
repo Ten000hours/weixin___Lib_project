@@ -28,47 +28,25 @@ page {
   text-align: center;
 }
 
-.order {
-  margin-top: 20rpx;
-  height: 100%;
-}
-
-.order .title {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  height: 80rpx;
-}
-
-.order .title .tab {
-  position: relative;
-  height: 80rpx;
-  color: black;
-  line-height: 80rpx;
-}
-
-.order .title .tab.active {
-  color: limegreen;
-}
-
-.insideBox {
-  background: #FAFAFA;
+.tab {
+  width: 750rpx;
+  height: 126rpx;
   border-bottom: solid lightgray 1rpx;
 }
 
-.pages{
-  height: 750rpx;
+.tab-item {
+  width: 250rpx;
+  height: 120rpx;
+  float: left;
+  line-height: 120rpx;
+  text-align: center;
 }
 
 .list {
   height: 200rpx;
-  border: solid lightgray 1rpx;
   color: gray;
   overflow: hidden;
-  border-left: 0rpx;
-  border-right: 0rpx;
-  border-bottom: 0rpx;
+  border-bottom: solid lightgray 1rpx;
 }
 
 .list-img {
@@ -84,9 +62,9 @@ page {
   margin-top: 22rpx;
 }
 
-.list-pay{
+.list-pay {
   font-size: 40rpx;
-  color: #6495ED;
+  color: #6495ed;
 }
 
 .list-title {
@@ -97,14 +75,14 @@ page {
   margin-top: 15rpx;
 }
 
-.list-btn{
+.list-btn {
   width: 130rpx;
   float: right;
   position: relative;
   bottom: 180rpx;
 }
 
-.btn{
+.btn {
   width: 120rpx;
   height: 70rpx;
   border-radius: 5rpx;
@@ -113,6 +91,10 @@ page {
   margin-top: 25rpx;
   margin-right: 20rpx;
   font-size: 32rpx;
+}
+
+.standAPlace {
+  height: 105rpx;
 }
 
 .forbut {

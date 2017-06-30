@@ -64,7 +64,7 @@ function check($sql){
     	echo 0;
     }
 }
-function recommend($sql){
+function recommend($sql,$n){
     $conn=new mysqli(HOST, USER_NAME, USER_PW) or die('´íÎó');
     if (mysqli_connect_errno($conn))
    { 
@@ -76,7 +76,7 @@ function recommend($sql){
     $jarr = array();
     @mysqli_close($conn);
     $num = 0;
-    while ($num<5&&($row=@mysqli_fetch_array($result,MYSQLI_ASSOC))){
+    while ($num<$n&&($row=@mysqli_fetch_array($result,MYSQLI_ASSOC))){
         array_push($jarr, $row);
 	$num++;
     }

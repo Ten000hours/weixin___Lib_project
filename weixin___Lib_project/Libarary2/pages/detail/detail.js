@@ -5,6 +5,7 @@ Page({
     id: 0,
     userId: 0,
     lists: [],
+    recommendLists: [],
     online: false,
     favorited: false,
     ordered: false,
@@ -36,6 +37,23 @@ Page({
         that.setData({
           lists: res.data,
         });
+        var bookWriterName = res.data[0].bookWriterName;
+        var bookType = res.data[0].bookType;
+        var bookName = res.data[0].bookName;
+        wx.request({
+          url: 'https://www.siliangjiadan.cn/php/relatedRecommend.php',
+          data: {
+            bookWriterName: bookWriterName,
+            bookType: bookType,
+            bookName: bookName
+          },
+          method: 'GET',
+          success: function (res) {
+            that.setData({
+              recommendLists: res.data
+            })
+          }
+        })
       }
     });
     if (online) {//如果在线就检查相应状态
@@ -152,6 +170,13 @@ Page({
         showCancel: false
       })
     }
+  },
+
+  gotoDetail: function(e){//转至详情页
+    var bookId = e.currentTarget.id;
+    wx.navigateTo({
+      url: '../detail/detail?id=' + bookId
+    })
   },
 
   favorite: function () {

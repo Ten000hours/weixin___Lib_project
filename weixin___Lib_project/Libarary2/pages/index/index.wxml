@@ -29,8 +29,7 @@
           <text>{{list.bookName}}</text>
         </view>
         <view class="list-infor">
-          <text> {{list.bookWriterName}}</text>|
-          <text>{{list.bookPublisher}}</text>
+          {{list.bookWriterName}}|{{list.bookPublisher}}
         </view>
         <view class="list-brief">{{list.bookBriefIntro}}...</view>
       </view>
@@ -53,8 +52,7 @@
             <text>{{list.bookName}}</text>
           </view>
           <view class="list-infor">
-            <text> {{list.bookWriterName}}</text>|
-            <text>{{list.bookPublisher}}</text>
+            {{list.bookWriterName}}|{{list.bookPublisher}}
           </view>
           <view class="list-brief">{{list.bookBriefIntro}}...</view>
         </view>

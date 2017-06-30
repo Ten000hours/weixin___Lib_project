@@ -24,7 +24,6 @@
       </view>
     </view>
   </view>
-
   <view class="brief-view">
     <view class="breif-view-title">【内容简介】</view>
     <text class="brief-view-content">{{lists[0].bookBriefIntro}}</text>
@@ -36,6 +35,15 @@
   <view class="brief-view">
     <view class="breif-view-title">【目录】</view>
     <text class="brief-view-content">{{lists[0].bookCatalog}}</text>
+  </view>
+  <view class="book-recommend">
+    <view class="book-recommend-title">【相关推荐】</view>
+    <view class="book-recommend-content"  wx:for="{{recommendLists}}" wx:for-item="list" wx:key="{{index}}">
+      <view class="content" id="{{list.bookId}}" bindtap="gotoDetail">
+        <image src="{{list.bookImgPath}}" class="content-img"></image>
+        <view class="content-name">{{list.bookName}}</view>
+      </view>
+    </view>
   </view>
 </view>
 <view class="standAplace">

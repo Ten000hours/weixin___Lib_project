@@ -1,0 +1,98 @@
+page {
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") fixed;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  height: 118rpx;
+  width: 100%;
+  background: #333;
+  z-index: 1;
+  position: fixed;
+}
+
+.header-name {
+  color: #148cca;
+  font-size: 43rpx;
+  text-align: center;
+  line-height: 118rpx;
+}
+
+.header-return {
+  width: 70rpx;
+  height: 70rpx;
+  position: relative;
+  left: 26rpx;
+  bottom: 44.5px
+}
+
+.standAplace {
+  height: 136rpx;
+}
+
+.tab {
+  width: 750rpx;
+  height: 126rpx;
+  border-bottom: solid lightgray 1rpx;
+}
+
+.tab-item {
+  width: 50%;
+  height: 120rpx;
+  float: left;
+  line-height: 120rpx;
+  text-align: center;
+}
+
+.list {
+  height: 180rpx;
+  border-bottom: solid lightgray 1rpx;
+  color: #333;
+  overflow: hidden;
+}
+
+.list-img {
+  width: 120rpx;
+  height: 160rpx;
+  margin: 10rpx 40rpx 0rpx 10rpx;
+  float: left;
+}
+
+.list-detail {
+  margin-left: 90rpx;
+  font-size: 30rpx;
+  margin-top: 18rpx;
+}
+
+
+.list-title {
+  width: 100%;
+  font-size: 32rpx;
+  color: #3b3b3b;
+  margin-top: 15rpx;
+}
+
+.list-author{
+   font-size: 30rpx;
+   font-weight: 0;
+}
+
+.list-btn {
+  width: 130rpx;
+  float: right;
+  position: relative;
+  bottom: 140rpx;
+}
+
+.btn{
+  width: 120rpx;
+  height: 70rpx;
+  border-radius: 5rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-right: 30rpx;
+  font-size: 32rpx;
+}

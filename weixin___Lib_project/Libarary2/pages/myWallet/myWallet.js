@@ -3,11 +3,14 @@ app.newBorrow = false;//全局变量，借阅状态
 app.QRContent = '';//全局变量，借书二维码的内容
 Page({
   data: {
-    tabs: ['待支付项', '已支付项', '已返还项'],
-    activeTab: 0,
+    boolNotPay: true,
+    boolPay: false,
+    boolPayed: false,
     lists: [],
     lists1: [],
     lists2: [],
+    style1: 'color: limegreen;border-bottom: solid 5rpx limegreen;',
+    style2: 'color: black',
     acconut: 0
   },
 
@@ -18,9 +21,6 @@ Page({
     var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     wx.request({//删除过期的订单
       url: 'https://www.siliangjiadan.cn/php/delBorrow.php?dateTime=' + today + '&userId=' + userId,
-      success: function (res) {
-       console.log(res.data);
-      }
     })
     wx.request({//用户账户余额
       url: 'https://www.siliangjiadan.cn/php/getUserAccount.php?userId=' + userId,
@@ -77,12 +77,29 @@ Page({
     })
   },
 
-  itemChange: function (e) {
-    this.setData({ activeTab: e.detail.current });
-  },
-
-  changeItem: function (e) {
-    this.setData({ activeTab: e.target.dataset.id });
+  chooseTab: function (e) {//选项
+    var id = e.currentTarget.id;
+    if (id == 'tab0') {
+      this.setData({
+        boolNotPay: true,
+        boolPay: false,
+        boolPayed: false,
+      })
+    }
+    else if (id == 'tab1') {
+      this.setData({
+        boolNotPay: false,
+        boolPay: true,
+        boolPayed: false,
+      })
+    }
+    else {
+      this.setData({
+        boolNotPay: false,
+        boolPay: false,
+        boolPayed: true,
+      })
+    }
   },
 
   gotoRecharge: function () {//跳转至充值页面
@@ -148,6 +165,20 @@ Page({
     wx.navigateTo({
       url: '../borrowQR/borrowQR'
     });
+  },
+
+  cancel: function (e) {//取消借阅
+    var bookId = e.currentTarget.id;//获取当前控件id
+    var userId = wx.getStorageSync('id');
+    wx.request({
+      url: 'https://www.siliangjiadan.cn/php/cancelBorrow.php?bookId=' + bookId + '&userId=' + userId,
+    })
+    wx.showToast({
+      title: '已取消',
+      icon: 'success',
+      duration: 2000
+    })
+    this.onShow();
   }
 
 })

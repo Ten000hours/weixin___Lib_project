@@ -5,6 +5,12 @@ Page {
   width: 100%;
 }
 
+text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .mask {
   width: 100%;
   height: 100%;
@@ -59,7 +65,7 @@ Page {
   width: 100%;
 }
 
-#header-special{
+#header-special {
   border-top: none;
 }
 
@@ -123,10 +129,12 @@ Page {
 
 .list-infor {
   font-size: 29rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .list-brief {
   position: relative;
-  right: 12rpx;
   font-size: 26rpx;
 }

@@ -10,6 +10,11 @@ Page({
     },
 
     onLoad: function (options) {
+        var date = new Date();
+        var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+        this.setData({
+            today: today
+        })
         var userId = wx.getStorageSync('id');
         var that = this;
         wx.request({
@@ -17,7 +22,7 @@ Page({
             success: function (res) {
                 that.setData({
                     lists: res.data
-                });
+                })
             }
         })
     },

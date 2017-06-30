@@ -1,7 +1,7 @@
 <?php
 require "conn.php";
-if($_GET["userName"]&&$_GET["phoneNum"]&&$_GET["IdNum"]&&$_GET["password"]){
-     $sql="INSERT INTO user VALUES (NULL,'" .$_GET["userName"]. "','" .$_GET["phoneNum"]. "','" .$_GET["IdNum"]. "','" .$_GET["password"]. "')";
+if($_POST["userName"]&&$_POST["phoneNum"]&&$_POST["IdNum"]&&$_POST["password"]){
+     $sql="INSERT INTO user VALUES (NULL,'" .$_POST["userName"]. "','" .$_POST["phoneNum"]. "','" .$_POST["IdNum"]. "','" .$_POST["password"]. "',0)";
      insert($sql);
 }
 ?>

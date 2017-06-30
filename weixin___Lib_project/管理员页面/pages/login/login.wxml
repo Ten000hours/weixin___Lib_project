@@ -1,0 +1,17 @@
+<view class="mask">
+</view>
+<view class="login">
+  <view class="login">
+    <view class="login-form">
+      <view class="input">
+        <view class="instruction">账号</view>
+        <input placeholder="管理员账号" class="login-txt" bindinput="getAdminName" />
+      </view>
+      <view class="input">
+        <view class="instruction">密码</view>
+        <input placeholder="请输入密码" class="login-txt" password="ture" bindinput="getPassword" />
+      </view>
+      <button class="login-btn" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

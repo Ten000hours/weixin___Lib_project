@@ -39,7 +39,7 @@ page {
   height: 70rpx;
   position: relative;
   left: 26rpx;
-  bottom: 44.5px
+  bottom: 44.5px;
 }
 
 .standAplace {
@@ -64,7 +64,6 @@ page {
   margin-right: 20rpx;
   width: 260rpx;
   height: 405rpx;
-  box-shadow: 0rpx 0rpx 15rpx black;
 }
 
 .book-info {
@@ -78,17 +77,22 @@ page {
 }
 
 .inforrow {
-  height: 55rpx;
+  font-size: 29rpx;
+  line-height: 54rpx;
+  overflow: hidden;
+  width: 400rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.brief-view {
+.brief-view, .book-recommend {
   margin-top: 20rpx;
   margin-left: 20rpx;
   padding-top: 20rpx;
   border-top: solid lightgray 1px;
 }
 
-.breif-view-title{
+.breif-view-title, .book-recommend-title {
   position: relative;
   right: 20rpx;
 }
@@ -97,6 +101,28 @@ page {
   font-size: 29rpx;
   line-height: 40rpx;
   color: #333;
+}
+
+.content {
+  width: 33.3%;
+  height: 450rpx;
+  float: left;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.content-img {
+  width: 180rpx;
+  height: 240rpx;
+}
+
+.content-name {
+  font-size: 29rpx;
+  line-height: 40rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bottom {
@@ -116,9 +142,8 @@ page {
   font-size: 26rpx;
 }
 
-.bottom-icon{
+.bottom-icon {
   height: 40rpx;
   width: 40rpx;
   margin-top: 15rpx;
 }
-

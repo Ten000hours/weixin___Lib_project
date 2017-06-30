@@ -43,24 +43,19 @@ page {
 
 .insideBox {
   margin: 0rpx 20rpx;
-  border-bottom: solid gray 1rpx;
 }
 
 .list {
-  height: 160rpx;
-  border: solid gray 1rpx;
+  min-height: 160rpx;
   color: gray;
   overflow: hidden;
-  border-left: 0rpx;
-  border-right: 0rpx;
-  border-bottom: 0rpx;
+  border-bottom: solid lightgray 1rpx;
 }
 
 .list-img {
   width: 105rpx;
   height: 140rpx;
   margin: 10rpx 40rpx 0rpx 10rpx;
-  box-shadow: 0rpx 0rpx 20rpx black;
   float: left;
 }
 

@@ -34,10 +34,34 @@ Page({
         newFavor: app.newFavor
       })
     }
-    this.checkOrder();
+    this.check();
+    this.deleteOrder();
   },
 
-  checkOrder: function () {//检查是否有预约到期的书
+  check: function () {//检查是否有预约到期或借阅快要到期的书
+    var date = new Date();
+    var that = this;
+    var userId = wx.getStorageSync('id');
+    var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    wx.request({//检查今天是否已检查过预约到期
+      url: 'https://www.siliangjiadan.cn/php/checkMsg1.php?userId=' + userId + '&date=' + today,
+      success: function (res) {
+        if (res.data == 0) {//没有检查过
+          that.checkOrder()
+        }
+      }
+    })
+    wx.request({//检查今天是否已检查过借阅快到期的书
+      url: 'https://www.siliangjiadan.cn/php/checkMsg2.php?userId=' + userId + '&date=' + today,
+      success: function (res) {
+        if (res.data == 0) {//没有检查过
+          that.checkBorrow()
+        }
+      }
+    })
+  },
+
+  checkOrder: function () {//检查是否有到期的书
     var date = new Date();
     var that = this;
     var userId = wx.getStorageSync('id');
@@ -45,22 +69,51 @@ Page({
     var currentTime = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
       + ' ' + date.getHours() + ':' + date.getMinutes()
       + ':' + date.getSeconds();
-    wx.request({//检查今天是否已检查过
-      url: 'https://www.siliangjiadan.cn/php/checkMsg.php?userId=' + userId + '&date=' + today,
+    wx.request({
+      url: 'https://www.siliangjiadan.cn/php/orderExpire.php?dateTime=' + today + '&userId=' + userId,
       success: function (res) {
-        if (res.data == 0) {//没有检查过
-          wx.request({//检查是否有到期的书
-            url: 'https://www.siliangjiadan.cn/php/orderExpire.php?dateTime=' + today + '&userId=' + userId,
-            success: function (res) {
-              if (res.data.length > 0) {//如果有就插入消息
-                that.setData({
-                  newMsg: true
-                })
-                wx.request({
-                  url: 'https://www.siliangjiadan.cn/php/addMsg.php?type=0&dateTime=' + currentTime + '&date='+ today + '&userId=' + userId
-                })
-              }
-            }
+        if (res.data.length > 0) {//如果有就插入消息
+          that.setData({
+            newMsg: true
+          })
+          wx.request({
+            url: 'https://www.siliangjiadan.cn/php/addMsg.php?type=0&dateTime=' + currentTime + '&date=' + today + '&userId=' + userId
+          })
+        }
+      }
+    })
+  },
+
+  deleteOrder: function () {//删除预约到期的书
+    var date = new Date();
+    var that = this;
+    var userId = wx.getStorageSync('id');
+    var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    wx.request({
+      url: 'https://www.siliangjiadan.cn/php/delOrder.php?dateTime=' + today + '&userId=' + userId,
+    })
+  },
+
+
+  checkBorrow: function () {//检查是否有书籍借阅即将到期
+    var date = new Date();
+    var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    var currentTime = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+      + ' ' + date.getHours() + ':' + date.getMinutes()
+      + ':' + date.getSeconds();
+    date.setDate(date.getDate() + 7);//获取七天后的日期
+    var that = this;
+    var userId = wx.getStorageSync('id');
+    var deadDay = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    wx.request({//检查是否有到期的书
+      url: 'https://www.siliangjiadan.cn/php/borrowExpire.php?dateTime=' + deadDay + '&userId=' + userId,
+      success: function (res) {
+        if (res.data.length > 0) {//如果有就插入消息
+          that.setData({
+            newMsg: true
+          })
+          wx.request({
+            url: 'https://www.siliangjiadan.cn/php/addMsg.php?type=1&dateTime=' + currentTime + '&date=' + today + '&userId=' + userId
           })
         }
       }
@@ -183,7 +236,7 @@ Page({
     })
   },
 
-  gotoMyMsg: function (e, url) {//转向我的消息
+  gotoMyMsg: function () {//转向我的消息
     this.setData({
       newMsg: false
     })

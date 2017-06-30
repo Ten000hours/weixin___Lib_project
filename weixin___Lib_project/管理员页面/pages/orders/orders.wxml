@@ -1,0 +1,46 @@
+<view class="header">
+  <input class="header-input" placeholder="请输入需要查看的用户名" bindinput="inputChange" />
+  <image src="{{iconPath}}" class="header-scan" bindtap="searchByScan"></image>
+  <image src="../../img/search.png" class="header-search" bindtap="searchByName"></image>
+</view>
+<view class="standAplace">
+</view>
+<view class="order">
+  <view class="tab">
+    <view id="tab1" class="tab-item" style="{{boolPay?style1:style2}}" bindtap="chooseTab">已支付订单</view>
+    <view id="tab2" class="tab-item" style="{{boolPayed?style1:style2}}" bindtap="chooseTab">已返回订单</view>
+  </view>
+  <view wx:if="{{boolPay}}">
+    <block wx:for="{{lists1}}" wx:for-item="list" wx:key="{{index}}">
+      <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+        <view>
+          <image class="list-img" src="{{list.bookImgPath}}"></image>
+        </view>
+        <view class="list-detail">
+          <view>书名：{{list.bookName}}</view>
+          <view>用户： {{list.userName}}</view>
+          <view>借书时间：{{list.borrowTime}}</view>
+          <view>最迟还书时间： {{list.returnTime}}</view>
+        </view>
+        <view class="list-btn">
+          <view class="btn" style="background: limegreen;color: white;" bindtap="returnBook" id="{{index}}">还书</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{boolPayed}}">
+    <block wx:for="{{lists2}}" wx:for-item="list" wx:key="{{index}}">
+      <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+        <view>
+          <image class="list-img" src="{{list.bookImgPath}}"></image>
+        </view>
+        <view class="list-detail">
+          <view>书名：{{list.bookName}}</view>
+          <view>用户： {{list.userName}}</view>
+          <view>借书时间：{{list.borrowTime}}</view>
+          <view>还书时间： {{list.returnTime}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

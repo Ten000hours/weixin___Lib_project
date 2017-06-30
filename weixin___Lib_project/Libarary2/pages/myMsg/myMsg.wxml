@@ -5,10 +5,10 @@
 <view class="standAplace">
 </view>
 <block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.messageId">
-  <view class="list" id="{{list.messageType}}">
-    <image src="{{list.message?img1:img2}}" class="list-icon"></image>
+  <view class="list" id="{{list.messageType}}" bindtap="gotoMsg">
+    <image src="{{list.messageType==0?img1:img2}}" class="list-icon"></image>
     <view class="mask">
-      <text class="list-title">部分预约已到期，请及时前往图书馆取书</text>
+      <text class="list-title">{{list.messageType==0?msg1:msg2}}</text>
     </view>
     <view class="list-time">{{list.messageTime}}</view>
   </view>

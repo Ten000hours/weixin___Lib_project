@@ -1,0 +1,40 @@
+<view class="mask">
+</view>
+<view class="header">
+  <view class="header-name"> {{lists[0].bookName}}</view>
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+</view>
+<view class="standAplace">
+</view>
+<view class="main">
+  <view class="book-list">
+    <view>
+      <image class="bookimage" src="{{lists[0].bookImgPath}}"></image>
+    </view>
+    <view class="book-info">
+      <view class="book-info-style">
+        <view class="inforrow">书名: {{lists[0].bookName}}</view>
+        <view class="inforrow">作者: {{lists[0].bookWriterName}} </view>
+        <view class="inforrow">价格: {{lists[0].bookPrice}}</view>
+        <view class="inforrow">在架位置: {{lists[0].bookPosition}}</view>
+        <view class="inforrow">出版信息: {{lists[0].bookPublisher}}</view>
+        <view class="inforrow">所属类别: {{lists[0].bookType}}</view>
+        <view class="inforrow">被借阅次数: {{lists[0].bookBorrowTimes}}</view>
+        <view class="inforrow">可借数量: {{lists[0].bookCollectNum}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="brief-view">
+    <view class="breif-view-title">【内容简介】</view>
+    <text class="brief-view-content">{{lists[0].bookBriefIntro}}</text>
+  </view>
+  <view class="brief-view">
+    <view class="breif-view-title">【作者简介】</view>
+    <text class="brief-view-content">{{lists[0].bookWriterInfor}}</text>
+  </view>
+  <view class="brief-view">
+    <view class="breif-view-title">【目录】</view>
+    <text class="brief-view-content">{{lists[0].bookCatalog}}</text>
+  </view>
+</view>

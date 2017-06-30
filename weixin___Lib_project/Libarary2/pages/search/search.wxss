@@ -65,12 +65,9 @@ page {
 .list {
   height: 150rpx;
   font-family: "微软雅黑";
-  border: solid gray 1rpx;
+  border-bottom: solid lightgray 1rpx;
   color: gray;
   overflow: hidden;
-  border-left: 0rpx;
-  border-right: 0rpx;
-  border-bottom: 0rpx;
 }
 
 .list-img {
@@ -82,7 +79,6 @@ page {
   width: 105rpx;
   height: 140rpx;
   margin: 5rpx 40rpx 0rpx 10rpx;
-  box-shadow: 0rpx 0rpx 20rpx black;
 }
 
 .list-detail {
@@ -92,18 +88,20 @@ page {
 .list-title {
   width: 100%;
   font-size: 35rpx;
-  color: #3b3b3b;
+  color: black;
   font-weight: bold;
   margin-top: 20rpx;
 }
 
 .list-infor {
   font-size: 29rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .list-brief {
   position: relative;
-  right: 12rpx;
   font-size: 26rpx;
 }
 

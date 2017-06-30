@@ -7,79 +7,70 @@
     </view>
   </view>
   <view class="order">
-    <view class="title">
-      <view wx:for="{{tabs}}" wx:key="{{index}}" data-id="{{index}}" wx:for-item="tab" class="tab{{index == activeTab ? ' active' : ''}}" bindtap="changeItem">{{tab}}</view>
+    <view class="tab">
+      <view id="tab0" class="tab-item" style="{{boolNotPay?style1:style2}}" bindtap="chooseTab">未支付订单</view>
+      <view id="tab1" class="tab-item" style="{{boolPay?style1:style2}}" bindtap="chooseTab">已支付订单
+      </view>
+      <view id="tab2" class="tab-item" style="{{boolPayed?style1:style2}}" bindtap="chooseTab">已返回订单</view>
     </view>
-    <swiper current="{{activeTab}}" class="pages" bindchange="itemChange">
-      <swiper-item class="item">
-        <view class="insideBox">
-          <view style="display:">
-            <block wx:for="{{lists}}" wx:for-item="list" wx:key="list.id">
-              <view class="list">
-                <view>
-                  <image class="list-img" src="{{list.bookImgPath}}"></image>
-                </view>
-                <view class="list-detail">
-                  <view class="list-title">
-                    <text>{{list.bookName}}</text>
-                  </view>
-                  <view class="list-author">作者： {{list.bookWriterName}}</view>
-                  <view>订单时间：{{list.borrowTime}}</view>
-                  <view class="list-pay">应付金额： {{list.bookPrice}}元</view>
-                </view>
-                <view class="list-btn">
-                  <view class="btn" style="background: #6495ED;color: white;" bindtap="payForDeposit" id="{{index}}">付款</view>
-                  <view class="btn" style="background: #EAEAEA;color:  #6495ED;">取消</view>
-                </view>
-              </view>
-            </block>
+    <view wx:if="{{boolNotPay}}">
+      <block wx:for="{{lists}}" wx:for-item="list" wx:key="list.id">
+        <view class="list">
+          <view>
+            <image class="list-img" src="{{list.bookImgPath}}"></image>
+          </view>
+          <view class="list-detail">
+            <view class="list-title">
+              <text>{{list.bookName}}</text>
+            </view>
+            <view class="list-author">作者： {{list.bookWriterName}}</view>
+            <view>订单时间：{{list.borrowTime}}</view>
+            <view class="list-pay">应付金额： {{list.bookPrice}}元</view>
+          </view>
+          <view class="list-btn">
+            <view class="btn" style="background: #6495ED;color: white;" bindtap="payForDeposit" id="{{index}}">付款</view>
+            <view class="btn" style="background: #EAEAEA;color:  #6495ED;" bindtap="cancel" id="{{list.bookId}}">取消</view>
           </view>
         </view>
-      </swiper-item>
-      <swiper-item class="item">
-        <view class="insideBox">
-          <view style="display:">
-            <block wx:for="{{lists1}}" wx:for-item="list" wx:key="list.id">
-              <view class="list" id="list.bookId" bindtap="gotoBorrowQR">
-                <view>
-                  <image class="list-img" src="{{list.bookImgPath}}"></image>
-                </view>
-                <view class="list-detail">
-                  <view class="list-title">
-                    <text>{{list.bookName}}</text>
-                  </view>
-                  <view class="list-author">作者： {{list.bookWriterName}}</view>
-                  <view>借书时间：{{list.borrowTime}}</view>
-                  <view>最迟还书时间： {{list.returnTime}}</view>
-                </view>
-              </view>
-            </block>
+      </block>
+    </view>
+    <view wx:if="{{boolPay}}">
+      <block wx:for="{{lists1}}" wx:for-item="list" wx:key="list.id">
+        <view class="list" id="list.bookId" bindtap="gotoBorrowQR">
+          <view>
+            <image class="list-img" src="{{list.bookImgPath}}"></image>
+          </view>
+          <view class="list-detail">
+            <view class="list-title">
+              <text>{{list.bookName}}</text>
+            </view>
+            <view class="list-author">作者： {{list.bookWriterName}}</view>
+            <view>借书时间：{{list.borrowTime}}</view>
+            <view>最迟还书时间： {{list.returnTime}}</view>
           </view>
         </view>
-      </swiper-item>
-      <swiper-item class="item">
-        <view class="insideBox">
-          <view style="display:">
-            <block wx:for="{{lists2}}" wx:for-item="list" wx:key="list.id">
-              <view class="list">
-                <view>
-                  <image class="list-img" src="{{list.bookImgPath}}"></image>
-                </view>
-                <view class="list-detail">
-                  <view class="list-title">
-                    <text>{{list.bookName}}</text>
-                  </view>
-                  <view class="list-author">作者： {{list.bookWriterName}}</view>
-                  <view>借书时间：{{list.borrowTime}}</view>
-                  <view>还书时间： {{list.returnTime}}</view>
-                </view>
-              </view>
-            </block>
+      </block>
+    </view>
+    <view wx:if="{{boolPayed}}">
+      <block wx:for="{{lists2}}" wx:for-item="list" wx:key="list.id">
+        <view class="list">
+          <view>
+            <image class="list-img" src="{{list.bookImgPath}}"></image>
+          </view>
+          <view class="list-detail">
+            <view class="list-title">
+              <text>{{list.bookName}}</text>
+            </view>
+            <view class="list-author">作者： {{list.bookWriterName}}</view>
+            <view>借书时间：{{list.borrowTime}}</view>
+            <view>还书时间： {{list.returnTime}}</view>
           </view>
         </view>
-      </swiper-item>
-    </swiper>
+      </block>
+    </view>
   </view>
+</view>
+<view class="standAPlace">
 </view>
 <view class="forbut">
   <view class="but" style="background: #6495ED; color:#fff;" bindtap="gotoRecharge">充值</view>

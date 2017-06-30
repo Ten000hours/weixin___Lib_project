@@ -51,8 +51,11 @@ page {
 }
 
 .registet-btn{
+  border: 0;
   color: black;
+  height: 90rpx;
+  line-height: 90rpx;
   font-size: 33rpx;
-  padding:8rpx;
-  margin: 80rpx 26rpx 0rpx 26rpx;
+  background: limegreen;
+  margin: 100rpx 25rpx 140rpx 25rpx;
 }

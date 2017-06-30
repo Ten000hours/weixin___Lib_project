@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/search/search",
+    "pages/historyOrder/historyOrder",
+    "pages/detail/detail",
+    "pages/modifyBook/modifyBook",
+    "pages/addBook/addBook",
+     "pages/users/users",
+     "pages/orders/orders"
+    
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单详情",
+        "iconPath": "/img/087.png",
+        "selectedIconPath": "/img/097.png"
+      },
+      {
+        "pagePath": "pages/addBook/addBook",
+        "text": "录入书籍",
+        "iconPath": "/img/021.png",
+        "selectedIconPath": "/img/097.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "修改书籍",
+        "iconPath": "/img/009.png",
+        "selectedIconPath": "/img/097.png"
+      },
+      {
+        "pagePath": "pages/users/users",
+        "text": "用户管理",
+        "iconPath": "/img/047.png",
+        "selectedIconPath": "/img/097.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

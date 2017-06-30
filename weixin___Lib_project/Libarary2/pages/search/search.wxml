@@ -8,7 +8,7 @@
   </view>
   <view class="standAplace">
   </view>
-  <view class="insideBox" style="{{lists.length?boderStyle:boderNone}}">
+  <view class="insideBox">
     <block wx:for-items="{{lists}}" wx:for-item="list" wx:key="list.bookId">
       <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
         <view class="list-img">
@@ -49,9 +49,9 @@
         <image src="../../img/life.png" class="classification-icon"></image>
         <text class="classification-title">生活</text>
       </view>
-      <view class="classification-type" id="经营" bindtap="searchByType">
+      <view class="classification-type" id="经管" bindtap="searchByType">
         <image src="../../img/manage.png" class="classification-icon"></image>
-        <text class="classification-title">经营</text>
+        <text class="classification-title">经管</text>
       </view>
     </view>
     <view class="history">

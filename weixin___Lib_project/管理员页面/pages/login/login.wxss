@@ -1,0 +1,134 @@
+page {
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") fixed;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.5;
+  position: absolute;
+  position: fixed;
+  z-index: -1;
+}
+
+.login {
+  margin: 0rpx 26rpx;
+  padding-top: 140rpx;
+}
+
+.input {
+  border-bottom: solid 1rpx #cdc5bf;
+  padding: 20rpx 0rpx 0rpx 0rpx;
+  margin-bottom: 40rpx;
+}
+
+.instruction {
+  color: #333;
+  font-size: 36rpx;
+  margin-bottom: 21rpx;
+  display: inline-block;
+}
+
+.login-txt {
+  width: 520rpx;
+  position: relative;
+  font-size: 35rpx;
+  text-align: center;
+  color: #333;
+  top: 12rpx;
+  display: inline-block;
+}
+
+.login-btn {
+  clear: both;
+  border: 0;
+  color: black;
+  font-size: 30rpx;
+  padding: 8rpx;
+  background: #0e0;
+  margin-bottom: 30rpx;
+}
+
+.login-btn:hover {
+  background: #00cd00;
+}
+
+.forget-reg {
+  font-size: 30rpx;
+  color: gray;
+}
+
+.reg {
+  float: right;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 35rpx;
+  margin-top: 15rpx;
+}
+
+.space-line {
+  display: block;
+  height: 40rpx;
+  width: 100%;
+}
+
+.detail {
+  margin: 110rpx 40rpx 0rpx 40rpx;
+  border-top: solid 1rpx #cdc5bf;
+}
+
+.list {
+  border-bottom: solid 1rpx #cdc5bf;
+  padding: 30rpx 0rpx;
+}
+
+.list-icon {
+  margin-right: 15px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.list-new {
+  position: relative;
+  top: 10rpx;
+  left: 30rpx;
+  width: 85rpx;
+  height: 45rpx;
+}
+
+.list-goto {
+  float: right;
+  margin-right: 10rpx;
+  color: gray;
+  font-size: 32rpx;
+}
+
+.logout {
+  margin-top: 120rpx;
+  margin-bottom: 35rpx;
+  font-size: 38rpx;
+  line-height: 95rpx;
+  height: 95rpx;
+  background: #f33;
+}

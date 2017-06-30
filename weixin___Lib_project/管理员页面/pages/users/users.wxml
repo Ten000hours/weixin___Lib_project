@@ -1,0 +1,21 @@
+<view class="mask">
+</view>
+<view class="header">
+  <input class="header-input" placeholder="请输入需要查看的用户名" bindinput="inputChange" maxlength="20" />
+  <image src="../../img/search.png" class="header-search" bindtap="searchByName"></image>
+</view>
+<view class="standAplace">
+</view>
+<view>
+  <block wx:for="{{lists}}" wx:for-item="list" wx:key="{{index}}">
+    <view class="list">
+      <view class="list-user" id="{{list.userId}}" bindtap="gotoHistoryOrder">
+        <view class="list-name">{{list.userName}}</view>
+        <view>用户id：{{list.userId}}</view>
+        <view>电话号码: {{list.userPhoneNum}}</view>
+        <view>身份证号: {{list.userIdNum}}</view>
+      </view>
+      <view class="list-btn" bindtap="deleteUser" id="{{list.userId}}">删除</view>
+    </view>
+  </block>
+</view>

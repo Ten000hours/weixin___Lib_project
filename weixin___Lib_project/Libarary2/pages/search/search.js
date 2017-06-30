@@ -1,4 +1,5 @@
 var app = getApp();
+app.times = 0;
 Page({
   data: {
     lists: [],
@@ -9,7 +10,7 @@ Page({
     iconPath: '../../img/scan.png',
     boolScan: true,
     boolClear: false,
-    boderStyle: 'border-bottom: solid gray 1rpx',
+    boderStyle: 'border-bottom: solid lightgray 1rpx',
     boderNone: 'border:none',
     bookId: '',
     hide: true,
@@ -267,10 +268,39 @@ Page({
     }
   },
 
+  checkBorrowTimes: function () {//检查是否已达今日借阅上限
+    var userId = wx.getStorageSync('id');
+    var date = new Date();
+    var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    wx.request({
+      url: 'https://www.siliangjiadan.cn/php/checkBorrowTimes.php',
+      data: {
+        userId: userId,
+        dateTime: today
+      },
+      success: function (res) {
+        console.log(res.data);
+        if (res.data.length == 2) {
+          app.times = 2;
+        }
+      }
+    })
+  },
+
   borrow: function () {//书籍借阅方法
     this.setData({
       hide: true
     })
+    this.checkBorrowTimes();
+    if (app.times == 2) {
+      wx.showModal({
+        title: '提示',
+        content: '已达今日借阅上限，一次性限定借两本书籍',
+        showCancel: false
+      })
+      app.times == 0;//清空全局变量
+      return;
+    }
     var that = this;
     var userId = wx.getStorageSync('id');
     wx.request({//确定书籍余量是否可以借阅

@@ -29,7 +29,7 @@ Page({
     })
   },
 
-  publish: function () {
+  publish: function () {//发布
     if (this.data.online) {
       var id = this.data.userId;
       var date = new Date();

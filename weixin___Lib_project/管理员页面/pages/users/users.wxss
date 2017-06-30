@@ -1,0 +1,73 @@
+page {
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") fixed;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  height: 108rpx;
+  width: 100%;
+  background: #333;
+  padding-top: 28rpx;
+  position: fixed;
+  z-index: 1;
+}
+
+.header-search {
+  width: 75rpx;
+  height: 75rpx;
+  right: 25rpx;
+  float: right;
+  position: relative;
+  bottom: 78rpx;
+  z-index: 2;
+}
+
+.header-input {
+  width: 710rpx;
+  height: 80rpx;
+  margin: auto;
+  background: white;
+  border-radius: 7rpx;
+  text-align: center;
+}
+
+.standAplace {
+  height: 136rpx;
+}
+
+.list {
+  min-height: 160rpx;
+  padding: 10rpx 0;
+  font-family: "微软雅黑";
+  border-bottom: solid lightgray 1rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: gray;
+  margin: 0 25rpx;
+}
+
+.list-user {
+  float: left;
+}
+
+.list-name {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.list-btn {
+  float: right;
+  width: 120rpx;
+  height: 70rpx;
+  border-radius: 5rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-top: 45rpx;
+  background: limegreen;
+  font-size: 29rpx;
+  color: #333;
+  font-weight: bold;
+}

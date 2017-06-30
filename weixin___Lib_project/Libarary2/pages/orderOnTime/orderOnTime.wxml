@@ -1,0 +1,29 @@
+<view class="mask">
+</view>
+<view class="header">
+  <image bindtap="returnLast" src="../../img/return.png" class="header-return"></image>
+  <text class="header-title">到期预约:{{lists.length}}</text>
+</view>
+<view class="standAplace">
+</view>
+<scroll-view class="box" scroll-y="true" bindscroll="scroll">
+  <view class="insideBox" >
+    <view style="display:">
+      <block wx:for="{{lists}}" wx:for-item="list" wx:key="{{list.bookId}}">
+        <view class="list" id="{{list.bookId}}" bindtap="gotoDetail">
+          <view>
+            <image class="list-img" src="{{list.bookImgPath}}"></image>
+          </view>
+          <view class="list-detail">
+            <view class="list-title">
+              <text>{{list.bookName}}</text>
+            </view>
+            <view class="list-author">作者： {{list.bookWriterName}}</view>
+            <view class="list-borrow">取书日期： {{list.takeTime}}</view>
+            <image src="../../img/onTime.png" class="list-remind"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</scroll-view>

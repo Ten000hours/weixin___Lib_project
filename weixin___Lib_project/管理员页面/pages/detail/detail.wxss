@@ -1,0 +1,128 @@
+page {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+  background: url("http://www.siliangjiadan.cn/img/timg.jpg") fixed;
+  background-size: 100% 100%;
+  font-family: "微软雅黑";
+  font-weight: 400;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.5;
+  position: absolute;
+  position: fixed;
+  z-index: -1;
+}
+
+.header {
+  height: 118rpx;
+  width: 100%;
+  background: #333;
+  position: fixed;
+  z-index: 1;
+}
+
+.header-name {
+  color: #148cca;
+  font-size: 43rpx;
+  text-align: center;
+  line-height: 118rpx;
+}
+
+.header-return {
+  width: 70rpx;
+  height: 70rpx;
+  position: relative;
+  left: 26rpx;
+  bottom: 44.5px
+}
+
+.standAplace {
+  height: 120rpx;
+}
+
+.main {
+  padding: 0rpx 20rpx;
+}
+
+.book-list {
+  display: inline-flex;
+  width: 100%;
+  height: 430rpx;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+
+.bookimage {
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  width: 260rpx;
+  height: 405rpx;
+}
+
+.book-info {
+  margin-left: 10rpx;
+  width: 530rpx;
+  height: 340rpx;
+}
+
+.book-info-style {
+  font-size: 30rpx;
+}
+
+.inforrow {
+  font-size: 29rpx;
+  line-height: 54rpx;
+  overflow: hidden;
+  width: 400rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brief-view {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+  border-top: solid lightgray 1px;
+}
+
+.breif-view-title{
+  position: relative;
+  right: 20rpx;
+}
+
+.brief-view-content {
+  font-size: 29rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+.bottom {
+  height: 108rpx;
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: -1rpx;
+  position: fixed;
+  z-index: 1;
+}
+
+.bottom-favorite, .bottom-order, .bottom-borrow {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.bottom-icon{
+  height: 40rpx;
+  width: 40rpx;
+  margin-top: 15rpx;
+}
+
